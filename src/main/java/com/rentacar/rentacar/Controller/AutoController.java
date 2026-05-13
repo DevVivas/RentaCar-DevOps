@@ -12,7 +12,7 @@ import com.rentacar.rentacar.Service.AutoService;
  * CAPA DE CONTROLADOR (Entry Point)
  * Esta clase expone los Endpoints para que un cliente (Postman, Frontend) 
  * pueda comunicarse con nuestra aplicación. 
- * Gestiona las Solicitudes (Requests) y entrega las Respuestas (Responses).
+ * Gestiona las Solicitudes (Requests) y entrega las Respuestas (Responses)
  */
 @RestController // Define que esta clase es un controlador REST (maneja datos JSON).
 @RequestMapping("/api/autos") // Ruta base para todos los endpoints de este controlador.
