@@ -51,11 +51,7 @@ jobs:
         with:
           name: snyk-report
           path: snyk-report.json
-  
-  analisis-sonarcloud:
-    runs-on: ubuntu-latest
-    needs: analisis-vulnerabilidad 
-    steps: 
+          
       - name: Checkout repository
         uses: actions/checkout@v3
 
@@ -79,7 +75,7 @@ jobs:
            
   docker-image-build:
     runs-on: ubuntu-latest
-    needs: analisis-vulnerabilidad 
+    needs:   analisis-sonarcloud
     steps: 
       - name: Build Docker image
         run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/rentcar-back:latest .
