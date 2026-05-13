@@ -28,7 +28,7 @@ jobs:
       - name: Make Maven Wrapper executable
         run: chmod +x mvnw
         continue-on-error: true
-        
+
       - name: snyk test java 
         continue-on-error: true
         env: 
@@ -76,7 +76,8 @@ jobs:
            -Dsonar.projectKey=${PROJECT_KEY_SONAR} \
            -Dsonar.organization=${ORGANIZATION_SONAR} \
            -Dsonar.login=${SONAR_TOKEN}
-
+           
+  docker-image-build:
       - name: Build Docker image
         run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/rentcar-back:latest .
       - name: Login to Docker Hub
