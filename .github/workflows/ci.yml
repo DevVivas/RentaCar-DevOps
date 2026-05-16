@@ -2,10 +2,8 @@ name: "Revision de MarkDown"
 
 on:
   push:
-    # Se ejecuta cada vez que hacemos push en estas ramas
     branches: [ "main", "feature/**", "docs/**" ]
   pull_request:
-    # Se ejecuta en cada pull request hacia la rama principal
     branches: [ "main" ]
 
 jobs:
