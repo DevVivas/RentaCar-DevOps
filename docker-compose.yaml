@@ -1,20 +1,20 @@
 version: '3.8'
 services:
   backend:
-    image: rentcar-back
+    image: abrahan47/rentcar-back
     restart: on-failure
     ports:
       - "3000:3000"
 
   database:
-    image: mysql
+    image: mysql:latest
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: rentcar_db
       MYSQL_USER: rentcar_user
       MYSQL_PASSWORD: rentcar_pass
     ports:
-      - "3306:3306"
+      - "3308:3308"
     volumes:
       - "mysql_data:/var/lib/mysql"
 volumes:
